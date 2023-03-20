@@ -5,6 +5,15 @@ body {
     font-weight: 300;
 }
 
+.h1-bhs {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.text-bhs {
+    color: #FF6F00;
+}
+
 .btn {
     padding: 7px 30px;
     border-radius: 0 !important;
