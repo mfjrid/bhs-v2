@@ -29,6 +29,34 @@ input:-webkit-autofill {
     margin-bottom: 6px;
 }
 
+::placeholder {
+    color: #868686 !important;
+}
+
 a {
     color: #FF6F00 !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #f38938 !important;
+    text-decoration: underline;
+}
+
+.text-small {
+    font-size: 0.8em;
+}
+
+.container-bhs {
+    min-height: 100vh;
+    background-color: #191B1D;
+}
+
+.quotes {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 30px;
+    padding-bottom: 15px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
 }

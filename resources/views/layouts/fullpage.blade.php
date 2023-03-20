@@ -14,8 +14,6 @@
 </head>
 
 <body>
-    @include('partials.navbar')
-
     @yield('content')
 
     <script src="{{ url('/') }}/dist/bootstrap/js/bootstrap.bundle.min.js"></script>
