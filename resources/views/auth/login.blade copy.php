@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-5">
+            <div class="col-md-6">
 
                 <div class="card p-4 mt-md-5 bg-dark">
                     <div class="row justify-content-center">
@@ -13,39 +13,72 @@
                     </div>
                     <form action="{{ route('login') }}" method="POST">
                         @csrf
-                        <div class="row mb-1">
+                        <div class="row">
                             <div class="mb-3">
-                                <label class="form-label" for="username">Username</label>
-                                <input class="form-control @error('username') is-invalid @enderror" type="text"
-                                    name="username" id="username" value="{{ old('username') }}" required>
-                                @error('username')
+                                <label class="form-label" for="name">Name</label>
+                                <input class="form-control @error('name') is-invalid @enderror" type="text"
+                                    name="name" id="name" value="{{ old('name') }}" required autofocus>
+                                @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
                         </div>
-                        <div class="row mb-2">
-                            <div class="mb-3">
-                                <label class="form-label" for="password">Password</label>
-                                <input class="form-control @error('password') is-invalid @enderror" type="password"
-                                    name="password" id="password" value="{{ old('password') }}" required>
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="mb-3">
+                                    <label class="form-label" for="email">Email</label>
+                                    <input class="form-control @error('email') is-invalid @enderror" type="email"
+                                        name="email" id="email" value="{{ old('email') }}" required>
+                                    @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="mb-3">
+                                    <label class="form-label" for="username">Username</label>
+                                    <input class="form-control @error('username') is-invalid @enderror" type="text"
+                                        name="username" id="username" value="{{ old('username') }}" required>
+                                    @error('username')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
                             </div>
                         </div>
-                        <div class="row mb-5">
-                            <div class="d-grid gap-2">
-                                <button class="btn btn-primary">Login</button>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label" for="password">Password</label>
+                                    <input class="form-control @error('password') is-invalid @enderror" type="password"
+                                        name="password" id="password" value="{{ old('password') }}" required>
+                                    @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label" for="retypepassword">Re-type Password</label>
+                                    <input class="form-control @error('retypepassword') is-invalid @enderror"
+                                        type="password" name="retypepassword" id="retypepassword"
+                                        value="{{ old('retypepassword') }}" required>
+                                    @error('retypepassword')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
                             </div>
                         </div>
                     </form>
-                    <div class="row text-center">
-                        <p>Don't have an Account? <a href="{{ route('register') }}">Register</a>.</p>
-                    </div>
                 </div>
 
                 {{-- <div class="card">

@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+}
+
+.btn {
+    padding: 7px 30px;
+    border-radius: 0 !important;
+}
+
+.form-control {
+    border-radius: 0 !important;
+}
+
+.card {
+    border-radius: 0 !important;
+}
+
+input:-webkit-autofill {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    -webkit-box-shadow: 0 0 0px 1000px #131517 inset !important;
+}
+
+.form-label {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+a {
+    color: #FF6F00 !important;
+}
