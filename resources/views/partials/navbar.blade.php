@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container py-3">
-        <a class="navbar-brand" href="{{ route('home') }}">Navbar</a>
+        <a class="navbar-brand" href="{{ route('home') }}">BHS</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
