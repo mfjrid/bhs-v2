@@ -1,5 +1,9 @@
 @extends('layouts.fullpage')
 
+@section('title')
+    Register
+@endsection
+
 @section('content')
     <div class="container-bhs">
         <div class="container pt-2">

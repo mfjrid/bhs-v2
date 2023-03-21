@@ -19,9 +19,10 @@ use App\Http\Controllers\ProfileController;
 Auth::routes();
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/progress', [RequestController::class, 'progress'])->name('progress');
 
-// Route::middleware('guest')->group(function () {
-//     Route::get('/', [HomeController::class, 'index'])->name('home');
-// });
-
-Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+    Route::get('/requests', [RequestController::class, 'requests'])->name('requests');
+    Route::get('/add', [RequestController::class, 'add'])->name('add-request');
+});
