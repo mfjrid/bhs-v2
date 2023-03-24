@@ -22,7 +22,7 @@
                                 Hello, {{ Auth::user()->name }}!
                             </a>
                             <ul class="dropdown-menu bg-primary">
-                                <li><a class="dropdown-item" href="{{ route('profile') }}">Profile</a></li>
+                                <li><a class="dropdown-item" href="{{ env('APP_ACCOUNT_URL') }}">Profile</a></li>
                                 <li><a class="dropdown-item" href="{{ route('requests') }}">My Requests</a></li>
                                 <li>
                                     <hr class="dropdown-divider">

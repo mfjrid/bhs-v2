@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RequestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,12 +19,10 @@ use App\Http\Controllers\ProfileController;
 Auth::routes();
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/progress', [RequestController::class, 'progress'])->name('progress');
+Route::get('/progress', [RequestController::class, 'index'])->name('progress');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
-    Route::post('/profile', [ProfileController::class, 'update'])->name('profile-update');
-    Route::get('/requests', [RequestController::class, 'requests'])->name('requests');
+    Route::get('/requests', [RequestController::class, 'mine'])->name('requests');
     Route::get('/add', [RequestController::class, 'add'])->name('add-request');
     Route::post('/add', [RequestController::class, 'store'])->name('store-request');
     Route::post('/delete', [RequestController::class, 'destroy'])->name('destroy-request');
