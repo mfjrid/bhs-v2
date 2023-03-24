@@ -22,7 +22,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/progress', [RequestController::class, 'index'])->name('progress');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/requests', [RequestController::class, 'mine'])->name('requests');
+    Route::get('/my-requests', [RequestController::class, 'mine'])->name('requests');
     Route::get('/add', [RequestController::class, 'add'])->name('add-request');
     Route::post('/add', [RequestController::class, 'store'])->name('store-request');
     Route::post('/delete', [RequestController::class, 'destroy'])->name('destroy-request');

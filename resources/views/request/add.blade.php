@@ -95,5 +95,12 @@
                 'success'
             )
         @endif
+        @if ($message = session('failure'))
+            Swal.fire(
+                'Request Denied!',
+                '{{ $message }}',
+                'error'
+            )
+        @endif
     </script>
 @endpush

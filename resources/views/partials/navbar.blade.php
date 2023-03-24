@@ -14,8 +14,11 @@
                 </li>
             </ul>
             <div class="d-flex">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
                     @auth
+                        <li class="nav-item">
+                            Remaining Request Today (0)
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">

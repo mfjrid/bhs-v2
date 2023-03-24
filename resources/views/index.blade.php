@@ -20,10 +20,11 @@
                 <thead>
                     <tr>
                         <th>#</th>
+                        <th>Requester</th>
                         <th>Youtube URL</th>
                         <th>Status</th>
-                        <th>Created at</th>
-                        <th>Updated at</th>
+                        <th>Created</th>
+                        <th>Updated</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -33,6 +34,7 @@
                     @forelse ($requests as $request)
                         <tr>
                             <td>{{ $number++ }}</th>
+                            <td>{{ $request->user->name }}</th>
                             <td>{{ $request->url }}</th>
                             <td>{{ $request->status->name }}</th>
                             <td>{{ $request->created_at->diffForHumans() }}</td>
