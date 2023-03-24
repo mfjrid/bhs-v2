@@ -10,7 +10,7 @@
     <link href="{{ url('/') }}/dist/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ url('/') }}/dist/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="{{ url('/') }}/css/style.css" rel="stylesheet">
-    @stack('styles')
+    @stack('style')
 </head>
 
 <body>

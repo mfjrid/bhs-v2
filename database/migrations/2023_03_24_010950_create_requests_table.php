@@ -15,13 +15,13 @@ return new class extends Migration
             $table->id();
             $table->uuid()->unique();
             $table->unsignedBigInteger('category_id');
-            $table->foreign("category_id")->references('id')->on("category");
+            $table->foreign("category_id")->references('id')->on("categories");
             $table->unsignedBigInteger('quality_id');
-            $table->foreign("quality_id")->references('id')->on("quality");
+            $table->foreign("quality_id")->references('id')->on("qualities");
             $table->string("url");
-            $table->string("message");
+            $table->string("message")->nullable();
             $table->unsignedBigInteger('user_id');
-            $table->foreign("user_id")->references('id')->on("user");
+            $table->foreign("user_id")->references('id')->on("users");
             $table->timestamps();
             $table->softDeletes();
         });

@@ -16,11 +16,13 @@
     --bs-tertiary-bg: var(--black);
 }
 
-[data-bs-theme="bhs"] .form-control {
+[data-bs-theme="bhs"] .form-control,
+[data-bs-theme="bhs"] .form-select {
     border-color: var(--orange-disabled);
 }
 
-[data-bs-theme="bhs"] .form-control:focus {
+[data-bs-theme="bhs"] .form-control:focus,
+[data-bs-theme="bhs"] .form-select:focus {
     box-shadow: 0 0 0 0.25rem rgba(255, 111, 0, 0.25);
 }
 
@@ -74,4 +76,14 @@
 
 [data-bs-theme="bhs"] .bg-primary {
     background-color: var(--black) !important;
+}
+
+.swal2-popup {
+    background-color: var(--dark) !important;
+}
+
+.swal2-styled.swal2-confirm {
+    background-color: var(--orange) !important;
+    color: var(--black) !important;
+    box-shadow: none !important;
 }

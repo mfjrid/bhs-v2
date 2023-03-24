@@ -19,7 +19,8 @@ body {
     border-radius: 0 !important;
 }
 
-.form-control {
+.form-control,
+.form-select {
     border-radius: 0 !important;
 }
 
@@ -73,6 +74,11 @@ a.nav-link {
     padding: 30px;
     padding-bottom: 15px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+.swal2-styled.swal2-confirm {
+    padding: 7px 30px;
+    border-radius: 0 !important;
 }
 
 

@@ -85,7 +85,7 @@
                             </form>
                             <div class="text-small text-center"> Already registered? <a href="/login"
                                     class="">Login</a> <br>
-                                or <a href="/" class="">Back to Home</a>. </div>
+                                or <a href="{{ route('home') }}" class="">Back to Home</a>. </div>
                         </div>
                     </div>
                 </div>
