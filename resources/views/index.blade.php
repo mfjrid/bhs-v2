@@ -19,30 +19,30 @@
             <table class="table table-striped table-dark table-bordered">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th>#</th>
+                        <th>Youtube URL</th>
+                        <th>Status</th>
+                        <th>Created at</th>
+                        <th>Updated at</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
+                    @php
+                        $number = 1;
+                    @endphp
+                    @forelse ($requests as $request)
+                        <tr>
+                            <td>{{ $number++ }}</th>
+                            <td>{{ $request->url }}</th>
+                            <td>{{ $request->status->name }}</th>
+                            <td>{{ $request->created_at->diffForHumans() }}</td>
+                            <td>{{ $request->updated_at->diffForHumans() }}</td>
+                        </tr>
+                    @empty
+                        <tr>
+                            <td colspan="5" class="text-center">No Request.</td>
+                        </tr>
+                    @endforelse
                 </tbody>
             </table>
         </div>

@@ -13,12 +13,18 @@ class RequestController extends Controller
 {
     public function index()
     {
-        return view('request.index');
+        $requests = ModelsRequest::all();
+        return view('request.index', [
+            'requests' => $requests
+        ]);
     }
 
     public function mine()
     {
-        return view('request.mine');
+        $requests = ModelsRequest::where('user_id', '=', Auth::id())->get();
+        return view('request.mine', [
+            'requests' => $requests
+        ]);
     }
 
     public function add()
@@ -48,6 +54,7 @@ class RequestController extends Controller
             'quality_id' => $request->quality_id,
             'url' => $request->url,
             'message' => $request->message,
+            'status_id' => 1,
             'user_id' => Auth::id(),
         ]);
 

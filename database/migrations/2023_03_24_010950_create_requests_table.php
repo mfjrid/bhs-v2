@@ -20,6 +20,8 @@ return new class extends Migration
             $table->foreign("quality_id")->references('id')->on("qualities");
             $table->string("url");
             $table->string("message")->nullable();
+            $table->unsignedBigInteger('status_id');
+            $table->foreign("status_id")->references('id')->on("status");
             $table->unsignedBigInteger('user_id');
             $table->foreign("user_id")->references('id')->on("users");
             $table->timestamps();

@@ -15,6 +15,7 @@ class Request extends Model
         'category_id',
         'url',
         'message',
+        'status_id',
         'user_id',
     ];
 
@@ -22,5 +23,20 @@ class Request extends Model
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Categories::class, 'category_id');
+    }
+
+    public function quality()
+    {
+        return $this->belongsTo(Qualities::class, 'quality_id');
+    }
+
+    public function status()
+    {
+        return $this->belongsTo(Status::class, 'status_id');
     }
 }
