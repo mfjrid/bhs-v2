@@ -17,7 +17,7 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
                     @auth
                         <li class="nav-item">
-                            Remaining Request Today (0)
+                            Remaining Request Today ({{ $remainingRequest }})
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -44,7 +44,7 @@
                         </li>
                     @endauth
                     @guest
-                        <li class="nav-item me-2 mb-md-2">
+                        <li class="nav-item me-2 mb-md-0 mb-2">
                             <a class="btn btn-outline-primary" href="{{ route('login') }}">Login</a>
                         </li>
                         <li class="nav-item">
