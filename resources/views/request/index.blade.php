@@ -42,7 +42,11 @@
                             <td><a href="{{ $request->url }}" target="_blank">Video Link</a></td>
                             <td>{{ $request->category->name }}</td>
                             <td>{{ $request->quality->name }}</td>
-                            <td>{{ $request->status->name }}</td>
+                            <td>
+                                <div class="badge" style="background-color: {{ $request->status->color }};">
+                                    <span>{{ $request->status->name }}</span>
+                                </div>
+                            </td>
                             <td>{{ $request->created_at->diffForHumans() }}</td>
                             <td>{{ $request->updated_at->diffForHumans() }}</td>
                         </tr>

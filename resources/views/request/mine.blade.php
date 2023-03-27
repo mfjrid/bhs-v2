@@ -35,9 +35,13 @@
                     @endphp
                     @forelse ($requests as $request)
                         <tr>
-                            <td>{{ $number++ }}</th>
-                            <td>{{ $request->url }}</th>
-                            <td>{{ $request->status->name }}</th>
+                            <td>{{ $number++ }}</td>
+                            <td><a href="{{ $request->url }}" target="_blank">Video Link</a></td>
+                            <td>
+                                <div class="badge" style="background-color: {{ $request->status->color }};">
+                                    <span>{{ $request->status->name }}</span>
+                                </div>
+                            </td>
                             <td>{{ $request->created_at->diffForHumans() }}</td>
                             <td>{{ $request->updated_at->diffForHumans() }}</td>
                             <td>Delete</td>

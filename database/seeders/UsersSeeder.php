@@ -21,7 +21,7 @@ class UsersSeeder extends Seeder
             'username' => 'mfjrid',
             'email' => 'mfjr48@gmail.com',
             'password' => Hash::make('admin123'),
-            'limit' => 2,
+            'limit' => 3,
         ]);
     }
 }
