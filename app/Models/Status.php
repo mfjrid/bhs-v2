@@ -15,5 +15,6 @@ class Status extends Model
         'name',
         'percentage',
         'color',
+        'slug',
     ];
 }
